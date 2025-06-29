@@ -1,0 +1,27 @@
+.overlay-cue {
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 24px;
+  color: #ffffff; /* &H00FFFFFF: white */
+  background: transparent; /* &H00000000: fully transparent */
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  text-shadow: 0 0 2px #000, /* OutlineColour: &H00000000 (black) */ 0 0 4px #000, 1px 1px 0 #000,
+    -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+  /* BorderStyle: 1 (outline), Outline: 2, Shadow: 1 */
+  padding: 0.2em 0.6em;
+  border-radius: 0.2em;
+  display: inline-block;
+  line-height: 1.2;
+  /* Alignment: 2 (bottom center), MarginV: 24px (0018 in hex) */
+  position: absolute;
+  left: 50%;
+  bottom: 24px;
+  transform: translateX(-50%);
+  pointer-events: none;
+  white-space: pre-line;
+}
+
+#video {
+  background: black;
+}

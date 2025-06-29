@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <div
+      id="overlay"
+      style="
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 640px;
+        height: 360px;
+        pointer-events: none;
+        z-index: 10;
+      "
+    ></div>
+    <video
+      id="video"
+      width="640"
+      height="360"
+      controls
+      src="http://ftp.halifax.rwth-aachen.de/blender/demo/movies/ToS/tears_of_steel_720p.mov"
+    >
+      <track kind="captions" src="/TOS-en.vtt" srclang="en" label="English" />
+      <track kind="metadata" src="/TOS-metadata.vtt" srclang="en" label="English" />
+    </video>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
