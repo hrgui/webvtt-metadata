@@ -116,6 +116,7 @@ window.onload = () => {
         cueDiv.style.position = "absolute";
         cueDiv.style.left = `${cueProperties.from.x}px`;
         cueDiv.style.top = `${cueProperties.from.y}px`;
+        cueDiv.setAttribute("data-text", cueProperties.text);
         overlay.appendChild(cueDiv);
       } else {
         const simpleCue: SimpleCue = {
@@ -125,7 +126,7 @@ window.onload = () => {
           endTime: cue.endTime,
         };
         activeCues.push(simpleCue);
-        overlay.innerHTML = `<div class="overlay-cue" id="cue-${cue.id}">${cueProperties.text}</div>`;
+        overlay.innerHTML = `<div class="cue"><span class="overlay-cue" data-text="${cueProperties.text}" id="cue-${cue.id}">${cueProperties.text}</span></div>`;
       }
     });
   };

@@ -1,27 +1,56 @@
+.cue {
+  position: absolute;
+  width: 100%;
+  bottom: 48px;
+  z-index: 0;
+  text-align: center;
+}
+
 .overlay-cue {
   font-family: "Trebuchet MS", sans-serif;
   font-size: 24px;
   color: #ffffff; /* &H00FFFFFF: white */
-  background: transparent; /* &H00000000: fully transparent */
-  font-weight: normal;
-  font-style: normal;
-  text-decoration: none;
-  text-shadow: 0 0 2px #000, /* OutlineColour: &H00000000 (black) */ 0 0 4px #000, 1px 1px 0 #000,
-    -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
   /* BorderStyle: 1 (outline), Outline: 2, Shadow: 1 */
-  padding: 0.2em 0.6em;
-  border-radius: 0.2em;
   display: inline-block;
-  line-height: 1.2;
   /* Alignment: 2 (bottom center), MarginV: 24px (0018 in hex) */
+  position: relative;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.overlay-cue:before {
+  color: black;
+  content: attr(data-text);
+  filter: blur(0px);
   position: absolute;
-  left: 50%;
-  bottom: 24px;
-  transform: translateX(-50%);
-  pointer-events: none;
-  white-space: pre-line;
+  z-index: -1;
+  transform: matrix(1, 0, 0, 1, 1, 1);
+  -webkit-text-stroke: 4px black;
+  top: 0;
+  left: 0;
+}
+
+.overlay-cue:after {
+  color: black;
+  content: attr(data-text);
+  filter: blur(0px);
+  position: absolute;
+  z-index: -1;
+  -webkit-text-stroke: 4px black;
+  top: 0;
+  left: 0;
 }
 
 #video {
   background: black;
+}
+
+.test-overlay {
+  width: 640px;
+  height: 360px;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  overflow: hidden;
+  position: absolute;
 }
