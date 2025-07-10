@@ -9,6 +9,7 @@
 .overlay-cue {
   font-family: "Trebuchet MS", sans-serif;
   font-size: 24px;
+  font-weight: semi-bold;
   color: #ffffff; /* &H00FFFFFF: white */
   /* BorderStyle: 1 (outline), Outline: 2, Shadow: 1 */
   display: inline-block;
